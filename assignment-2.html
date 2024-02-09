@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 10 Form</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file here -->
+  <style>
+    /* Reset some default styles for better consistency */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    fieldset {
+      border: none;
+    }
+
+    legend {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<form action="https://www.google.com" method="post">
+  <fieldset>
+    <legend>Submit your info</legend>
+    <label for="f-name">Full Name</label>
+    <input type="text" id="f-name" placeholder="Type your name" />
+
+    <label for="phone">Phone Number</label>
+    <input type="number" id="phone" placeholder="Type your number" />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Type your email" />
+
+    <label for="url">Website URL</label>
+    <input required type="url" id="url" placeholder="Type your URL" />
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="usa">USA</option>
+      <option value="canada">Canada</option>
+      <option value="uk">UK</option>
+      <option value="pakistan">Pakistan</option> <!-- Added Pakistan -->
+      <!-- Add more options as needed -->
+    </select>
+
+    <label>Interests</label>
+    <div>
+      <input type="checkbox" id="interest1" name="interests" value="sports">
+      <label for="interest1">Sports</label>
+    </div>
+    <div>
+      <input type="checkbox" id="interest2" name="interests" value="music">
+      <label for="interest2">Music</label>
+    </div>
+    <div>
+      <input type="checkbox" id="interest3" name="interests" value="technology">
+      <label for="interest3">Technology</label>
+    </div>
+    <!-- Add more checkboxes as needed -->
+
+    <label>Contact Method</label>
+    <div>
+      <input type="radio" id="contactEmail" name="contactMethod" value="email">
+      <label for="contactEmail">Email</label>
+    </div>
+    <div>
+      <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+      <label for="contactPhone">Phone</label>
+    </div>
+    <div>
+      <input type="radio" id="contactBoth" name="contactMethod" value="both">
+      <label for="contactBoth">Both Email and Phone</label>
+    </div>
+    <!-- Add more radio options as needed -->
+
+    <button type="submit">Submit your form</button>
+  </fieldset>
+</form>
+
+</body>
+</html>
